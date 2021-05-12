@@ -12,7 +12,7 @@
 * workspace - unity package 세팅 
   * Example
     * com.unko.\[PackageName\].editor
-    * com.unko.\[PackageName\].editortest
+    * com.unko.\[PackageName\].editor.tests
 
 ## 들어있는 것
 
