@@ -10,6 +10,9 @@
 * github secret 추가
 * workspace - unity project 이름 변경
 * workspace - unity package 세팅 
+  * Example
+    * com.unko.\[PackageName\].editor
+    * com.unko.\[PackageName\].editortest
 
 ## 들어있는 것
 
