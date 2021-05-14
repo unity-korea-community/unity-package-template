@@ -1,11 +1,9 @@
 # 이 워크플로는
-# 1. UnityProject/Assets/Package(=env.WORK_PATH)를 UnityProject/Packages(=env.PACKAGES_PATH)로 Move
+# 1. Local Package인 채로 Unity-UnitTest 실행
+# 1-1. 문제가 있으면 Artifact에 버그 리포트 및 중단,
+# 1-2. 문제가 없으면 2로 넘어갑니다.
 #
-# 2. Local Package인 채로 Unity-UnitTest 실행
-# 2-1. 문제가 있으면 Artifact에 버그 리포트 및 중단,
-# 2-2. 문제가 없으면 2로 넘어갑니다.
-#
-# 3. UnityProject/Packages를 Artifacts에 Upload를 한 뒤 {this_GithubRepository}의 master brach에 push합니다.
+# 2. UnityProject/Packages를 Artifacts에 Upload를 한 뒤 {this_GithubRepository}의 master brach에 push합니다.
 #
 # workflow syntax
 # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
@@ -27,8 +25,7 @@ env:
   SRC_BRANCH: workspace
   DEST_OWNER: unity-korea-community
   DEST_BRANCH: master
-  WORK_PATH: Assets/[packageName]
-  PACKAGES_PATH: Packages
+  WORK_PATH: Packages/[packageName]
 
 jobs:
   testAllModes:
@@ -59,11 +56,6 @@ jobs:
         with:
           PATTERNS: |
             ${{ env.WORK_PATH }}/**/*.cs
-
-      # copy UnityProject/Assets/Package to UnityProject/Packages
-      - name: ${{ env.WORK_PATH }} copy to ${{ env.PACKAGES_PATH }}
-        run: |
-          mv -v ${{ env.WORK_PATH }} ${{ env.PACKAGES_PATH }}
 
       # 예전 버전으로 하면 라이센스 인증이 안됨.. 그래서 동작하는 알파로 변경
       - uses: game-ci/unity-test-runner@v2.0-alpha-4 # https://github.com/marketplace/actions/unity-test-runner

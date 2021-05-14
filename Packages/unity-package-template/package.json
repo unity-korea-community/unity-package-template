@@ -1,7 +1,7 @@
 {
-  "name": "unko.[packageName]",
+  "name": "com.unko.packagename",
   "version": "1.0.0",
-  "displayName": "[packageName]",
+  "displayName": "UNKO packageName",
   "description": "This is an example package",
   "unity": "2019.1",
   "author": {
