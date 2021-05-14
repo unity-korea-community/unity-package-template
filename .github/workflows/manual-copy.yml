@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       SRC_PATH:
-        default: Assets/[packageName]/.
+        default: Packages/[packageName]/.
         description: copy to dstPath
         required: true
       DST_PATH:
