@@ -21,11 +21,11 @@ env:
   UNITY_VERSION: 2019.3.8f1
 
   # require Deploy
-  THIS_REPOSITORY: unity-package-template
+  THIS_REPOSITORY: [packageName]
   SRC_BRANCH: workspace
   DEST_OWNER: unity-korea-community
   DEST_BRANCH: master
-  WORK_PATH: Assets/unity-package-template
+  WORK_PATH: Assets/[packageName]
 
 jobs:
   testAllModes:
