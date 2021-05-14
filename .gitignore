@@ -2,6 +2,8 @@
 UserSettings
 Temp
 obj
+Packages/packages-lock.json
+
 *.csproj
 *.sln
-Packages/packages-lock.json
+*.md.meta
