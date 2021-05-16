@@ -7,5 +7,12 @@
   "author": {
     "name": "UNKO",
     "url": "https://github.com/unity-korea-community"
+  },
+  "bugs": {
+    "url": "https://github.com/unity-korea-community/unity-package-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unity-korea-community/unity-package-template.git"
   }
 }
