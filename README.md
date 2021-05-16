@@ -6,8 +6,6 @@
 
 ## repository generate 된 뒤 해야 할 일
 
-* github action에 환경변수 변경
-* github secret 추가
 * workspace - unity project 이름 변경
 * workspace - unity package 세팅 
   * Example
